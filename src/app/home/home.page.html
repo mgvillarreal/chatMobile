@@ -1,20 +1,27 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Chat Mobile
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding">
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+ <ion-card>
+  <ion-item>
+    <ion-label>Nickname: </ion-label>
+    <ion-input type="text" placeholder="Nickname" [(ngModel)]="nicknameMobile"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Email: </ion-label>
+    <ion-input type="email" placeholder="Email" [(ngModel)]="emailMobile"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-button (click)="guardaUsuario()">Ingresar</ion-button>
+  </ion-item>
+ </ion-card>
+
 </ion-content>
