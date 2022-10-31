@@ -7,14 +7,14 @@
 <ion-content>
   
   <ion-card *ngFor="let item of mensaje">
-    <ion-card-header>
-      {{item.usuario}}
+    <ion-card-header class="txt-mail">
+      {{item.usuario}} dice:
     </ion-card-header>
     <ion-card-content>
       {{item.texto}}
-      <div>
-        <!-- {{ item.fecha | date:'dd/MM/yy, h:mm a' }} -->
-        {{ item.fecha }}
+      <div class="txt-fecha">
+        {{ item.fecha | date:'dd/MM/yy, h:mm a' }}
+        <!-- {{ item.fecha }} -->
       </div>
     </ion-card-content>
   </ion-card>
