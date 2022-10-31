@@ -13,7 +13,8 @@
     <ion-card-content>
       {{item.texto}}
       <div>
-        {{ item.fecha.toDate() | date:'dd/MM/yy, h:mm a' }}
+        <!-- {{ item.fecha | date:'dd/MM/yy, h:mm a' }} -->
+        {{ item.fecha }}
       </div>
     </ion-card-content>
   </ion-card>
@@ -22,8 +23,8 @@
 
 <ion-footer>
   <ion-item>
-    <ion-input placeholder="Envia mensaje"> </ion-input>
-      <button ion-button icon-right>
+    <ion-input placeholder="Mensaje..." [(ngModel)]="nuevoMensaje"> </ion-input>
+      <button ion-button icon-right (click)="enviarMensaje()">
         <ion-icon name="send"></ion-icon>
       </button>
   </ion-item>
