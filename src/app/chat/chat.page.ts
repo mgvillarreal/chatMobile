@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ChatFirebaseService } from '../servicios/chat-firebase.service';
 
 @Component({
   selector: 'app-chat',
@@ -7,7 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChatPage implements OnInit {
 
-  constructor() { }
+  public mensaje:Array<any> = new Array<any>();
+
+  constructor(private firestoreApp: ChatFirebaseService) {
+    firestoreApp.traerColeccion().subscribe(t=>
+      {
+        this.mensaje = [];
+        (<Array<any>>t).forEach(element =>
+          this.mensaje.push(element)
+        )
+        console.log("mensaje: ", this.mensaje);
+      }
+    );
+  }
 
   ngOnInit() {
   }

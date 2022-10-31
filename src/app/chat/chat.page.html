@@ -6,12 +6,15 @@
 
 <ion-content>
   
-  <ion-card>
+  <ion-card *ngFor="let item of mensaje">
     <ion-card-header>
-      Nickname dice:
+      {{item.usuario}}
     </ion-card-header>
     <ion-card-content>
-      Mensaje...
+      {{item.texto}}
+      <div>
+        {{ item.fecha.toDate() | date:'dd/MM/yy, h:mm a' }}
+      </div>
     </ion-card-content>
   </ion-card>
   
