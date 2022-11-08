@@ -1,27 +1,35 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap');
+</style>
+
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Chat Mobile
-    </ion-title>
+    <ion-title class="txt-titulo"> Chat Mobile </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding">
 
  <ion-card>
-  <ion-item>
-    <ion-label>Nickname: </ion-label>
-    <ion-input type="text" placeholder="Nickname" [(ngModel)]="nicknameMobile"></ion-input>
-  </ion-item>
+    <ion-item lines="none">
+      <ion-label>Nickname: </ion-label>
+      <ion-input type="text" placeholder="Nickname" [(ngModel)]="nicknameMobile"></ion-input>
+    </ion-item>
+  </ion-card>
 
-  <ion-item>
-    <ion-label>Email: </ion-label>
-    <ion-input type="email" placeholder="Email" [(ngModel)]="emailMobile"></ion-input>
-  </ion-item>
+  <ion-card>
+    <ion-item lines="none">
+      <ion-label>Email: </ion-label>
+      <ion-input type="email" placeholder="Email" [(ngModel)]="emailMobile"></ion-input>
+    </ion-item>
+  </ion-card>
 
-  <ion-item>
+  <div class="centrado">
     <ion-button (click)="guardaUsuario()">Ingresar</ion-button>
-  </ion-item>
- </ion-card>
+  </div>
 
 </ion-content>
+
+
+
+

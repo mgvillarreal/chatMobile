@@ -6,7 +6,7 @@ import { ChatFirebaseService } from '../servicios/chat-firebase.service';
 @Component({
   selector: 'app-chat',
   templateUrl: './chat.page.html',
-  styleUrls: ['./chat.page.scss'],
+  styleUrls: ['./chat.page.scss']
 })
 export class ChatPage implements OnInit {
 
@@ -38,6 +38,7 @@ export class ChatPage implements OnInit {
 
     let datosUsuario = JSON.parse(localStorage.getItem('usuarioMobile'));
     this.mensajeChat.usuario = datosUsuario.email;
+    this.mensajeChat.nickname = datosUsuario.nickname;
     this.mensajeChat.fecha = new Date;
     this.mensajeChat.texto = this.nuevoMensaje;
 

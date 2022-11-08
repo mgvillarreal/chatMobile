@@ -1,4 +1,5 @@
 *{
+    font-family: 'Ubuntu', sans-serif;
     font-size: medium;
 }
 
@@ -13,4 +14,35 @@
 
 .no-borderb{
     border-style: none !important;
+}
+
+.enviado{
+    text-align: right;
+    background-color: #fbcdb5b6;
+    color: white;
+}
+
+.recibido{
+    text-align: left;
+    background-color: #b5b1b18f;
+    color: white;
+}
+
+.txt-titulo{
+    color: #f6a97f;
+}
+
+button{
+    background-color: transparent;
+    color: #f6a97f;
+}
+
+:host{
+    ion-content {
+      --background: #f6a97f24;
+    }
+
+    ion-item {
+        --background: #f6a97f78;
+    }
 }

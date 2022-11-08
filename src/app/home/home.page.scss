@@ -1,3 +1,12 @@
+*{
+  font-family: 'Ubuntu', sans-serif;
+  font-size: medium;
+}
+
+.txt-titulo{
+  color: #f6a97f;
+}
+
 #container {
   text-align: center;
 
@@ -25,3 +34,19 @@
 #container a {
   text-decoration: none;
 }
+
+.centrado{
+  text-align: center;
+}
+
+:host{
+  ion-content {
+    --background: #f6a97f24;
+  }
+
+  ion-button {
+    --background: #f6a97f;
+    --padding: 0px;
+  }
+}
+

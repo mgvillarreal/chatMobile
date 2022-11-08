@@ -1,20 +1,25 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap');
+</style>
+
 <ion-header>
   <ion-toolbar>
-    <ion-title>Mobile Chat</ion-title>
+    <ion-title class="txt-titulo">Mobile Chat</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   
-  <ion-card *ngFor="let item of mensaje">
+  <ion-card *ngFor="let item of mensaje; let i = index"
+  [ngClass]="(usuarioLogueado==mensaje[i]['usuario'])? 'enviado' : 'recibido' "
+  >
     <ion-card-header class="txt-mail">
-      {{item.usuario}} dice:
+      {{item.nickname}}:
     </ion-card-header>
     <ion-card-content>
       {{item.texto}}
       <div class="txt-fecha">
         {{ item.fecha | date:'dd/MM/yy, h:mm a' }}
-        <!-- {{ item.fecha }} -->
       </div>
     </ion-card-content>
   </ion-card>
